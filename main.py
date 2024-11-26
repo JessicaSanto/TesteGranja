@@ -15,22 +15,22 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://granja:senai%40134@proj
 
 
 
-# # Configuração do servidor
-# server_name = '127.0.0.1'
-# port='3306'
-# username = 'root'
-# password = 'senai%40134'
-# database = 'bd_medidorGranja'
+# Configuração do servidor
+server_name = 'projetointegrador-granja.mysql.database.azure.com'
+port='3306'
+username = 'granja'
+password = 'senai%40134'
+database = 'bd_medidorGranja'
 
 
 # # Caminho para o certificado CA (neste exemplo, assumindo que está no diretório raiz do projeto)
-# ca_certificate_path = 'DigiCertGlobalRootCA.crt.pem'
+ca_certificate_path = 'DigiCertGlobalRootCA.crt.pem'
 
 # # Construção da URI com SSL
-# uri = f"mysql://{username}:{password}@{server_name}:3306/{database}"
-# ssl_options = f"?ssl_ca={ca_certificate_path}"
+uri = f"mysql://{username}:{password}@{server_name}:3306/{database}"
+ssl_options = f"?ssl_ca={ca_certificate_path}"
 
-# app.config['SQLALCHEMY_DATABASE_URI'] = uri + ssl_options
+app.config['SQLALCHEMY_DATABASE_URI'] = uri + ssl_options
 
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://jessica:senai%40134@projetointegradorbanco.mysql.database.azure.com/medidor'
 # Configura a URI de conexão com o banco de dados MySQL.
