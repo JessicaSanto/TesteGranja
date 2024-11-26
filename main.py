@@ -11,7 +11,7 @@ app = Flask('registro')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # Configura o SQLAlchemy para rastrear modificações dos objetos, o que não é recomendado para produção.
 # O SQLAlchemy cria e modifica todos os dados da nossa tabela de forma automatica 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:senai%40134@127.0.0.1/bd_medidorgranja'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://granja:senai%40134@projetointegrador-granja.mysql.database.azure.com:3306/bd_medidorgranja'
 
 
 
